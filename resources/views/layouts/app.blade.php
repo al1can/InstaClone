@@ -26,7 +26,7 @@
                 <a class="navbar-brand d-flex" href="{{ url('/') }}">
                     <!--{{ config('app.name', 'Laravel') }}-->
                     <div><img src="/img/laravelLogo.png" alt="" width=40px height=30px class="pe-2"></div>
-                    <div class="ps-2" style="border-left: 1px solid black">Krinkil</div>
+                    <div class="ps-2 nav-item" style="border-left: 1px solid black">Krinkil</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -39,7 +39,10 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        @if(Auth::check())
+                            <a href="/profile/{{ Auth::user()->id }}" class="nav-link">Profile</a>
+                        @endif
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
