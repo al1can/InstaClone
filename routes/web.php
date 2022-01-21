@@ -26,4 +26,6 @@ Route::get('/profile/{user}', [App\Http\Controllers\ProfilesController::class, '
 Route::get('/profile/{user}/edit', [App\Http\Controllers\ProfilesController::class, 'edit'])->name('profile.edit');
 Route::patch('/profile/{user}', [App\Http\Controllers\ProfilesController::class, 'update'])->name('profile.update');
 
+Route::post('like/{post}', [App\Http\Controllers\LikesController::class, 'store']);
+
 Route::post('/follow/{user}', [App\Http\Controllers\FollowsController::class, 'store']);
