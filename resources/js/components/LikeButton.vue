@@ -1,7 +1,7 @@
 <template>
     <div>
         <button class="btn btn-primary ms-4" @click="likePost" v-text="likeText"></button>
-        <div v-text="likesStatus"></div>
+        <div v-text="currentLikesCount"></div>
     </div>
 </template>
 
@@ -16,7 +16,7 @@
         data: function () {
             return {
                 status: this.likes,
-                likesStatus: this.likesCount,
+                currentLikesCount: this.likesCount,
             }
         },
 
@@ -25,12 +25,12 @@
                 axios.post('/like/' + this.postId)
                     .then(response => {
                         this.status = !this.status;
-                        this.likesStatus = Number(this.likesStatus);
+                        this.currentLikesCount = Number(this.currentLikesCount);
                         if (this.status) {
-                            this.likesStatus += 1;
+                            this.currentLikesCount += 1;
                         }
                         else {
-                            this.likesStatus -= 1;
+                            this.currentLikesCount -= 1;
                         }
                     });
             }
