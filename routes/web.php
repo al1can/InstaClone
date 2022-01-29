@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
 
+Route::get('/post/{post}/likes', [App\Http\Controllers\LikesController::class, 'index']);
+
 Route::get('/', [App\Http\Controllers\PostsController::class, 'index']);
 Route::get('/post/create', [App\Http\Controllers\PostsController::class, 'create']);
 Route::get('/post/{post}', [App\Http\Controllers\PostsController::class, 'show']);

@@ -7,7 +7,7 @@
             <div class="d-flex">
                     <textarea id="comment" type="text" class="form-control @error('comment') is-invalid @enderror"
                     name="comment" value="{{ old('comment') }}" required autocomplete="comment" autofocus
-                    style="resize: none; width: 325px; height: 75px;"></textarea>
+                    style="resize: none; width: 23vw; height: 12vh;"></textarea>
 
                 @error('comment')
                     <span class="text-danger" role="alert">

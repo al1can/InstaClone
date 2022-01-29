@@ -29,7 +29,9 @@
                             <img src="/storage/{{ $post->image }}" style="max-width:600px">
                         </a>
                     </div>
-                    <like-button post-id="{{ $post->id }}" likes="{{ $post->likes->contains(auth()->user()->id) }}" likes-count="{{ $post->likes->count() }}"></like-button>
+                    <like-button post-id="{{ $post->id }}"
+                        likes="{{ $post->likes->contains(auth()->user()->id) }}"
+                        likes-count="{{ $post->likes->count() }}"></like-button>
                     <div class="text-start">
                         <p class="p-3">
                             <span class="fw-bold pe-3 fw-bold">
