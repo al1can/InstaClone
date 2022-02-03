@@ -51,7 +51,8 @@
 
             <div class="bg-white">
                 <div class="px-4">
-                    <like-button post-id="{{ $post->id }}"
+                    <like-button 
+                        post-id="{{ $post->id }}"
                         likes="{{ $post->likes->contains(auth()->user()->id) }}"
                         likes-count="{{ $post->likes->count() }}"></like-button>
                 </div>

@@ -19,9 +19,18 @@
                 @endcan
             </div>
             <div class="d-flex align-items-baseline">
-                <div class="pe-5"><strong>{{ $postCount }}</strong> posts</div>
-                <div class="pe-5"><strong>{{ $followersCount }}</strong> followers</div>
-                <div class="pe-5"><strong>{{ $followingCount }}</strong> following</div>
+                <!--<div class="pe-5"><strong>{{ $postCount }}</strong> posts</div>-->
+                <!--<div class="pe-5"><strong>{{ $followersCount }}</strong> followers</div>--->
+                <!--<div class="pe-5"><strong>{{ $followingCount }}</strong> following</div>-->
+
+                <profile-panel 
+                    user-id="{{ $user->id }}" 
+                    image="{{ $user->profile->profileImage() }}" 
+                    followers-count="{{ $followersCount }}"
+                    following-count="{{ $followingCount }}" 
+                    follows="{{ $follows }}" 
+                    post-count="{{ $postCount }}"></profile-panel>
+
                 @can('update', $user->profile)
                     <a href="/profile/{{ $user->id }}/edit" class="btn btn-primary">Edit Profile</a>
                 @endcan
