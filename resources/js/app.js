@@ -37,6 +37,6 @@ const app = new Vue({
 
 const app = createApp({})
 app.component('follow-button', require('./components/FollowButton.vue').default);
-app.component('like-button', require('./components/LikeButton.vue').default);
+app.component('post-panel', require('./components/PostPanel.vue').default);
 app.component('profile-panel', require('./components/ProfilePanel.vue').default);
 app.mount("#app");

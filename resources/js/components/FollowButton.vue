@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button class="btn btn-primary ms-4" @click="followUser" v-text="followText"></button>
+        <button class="btn btn-primary" @click="followUser" v-text="followText"></button>
     </div>
 </template>
 

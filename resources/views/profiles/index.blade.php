@@ -9,7 +9,7 @@
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex align-items-center">
-                    <div class="fs-2">{{ $user->username }}</div>
+                    <div class="fs-2 me-4">{{ $user->username }}</div>
 
                     <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
                 </div>

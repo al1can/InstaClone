@@ -12,6 +12,7 @@ class CommentsController extends Controller
     {
         $this->middleware('auth');
     }
+
     public function store(Post $post, Request $request)
     {
         $data = $request->validate([
@@ -26,6 +27,12 @@ class CommentsController extends Controller
             'comment' => request('comment'),
         ]);
 
+        return back();
+    }
+
+    public function destroy()
+    {
+        Comment::destroy(request("commentId"));
         return back();
     }
 }

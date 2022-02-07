@@ -51,10 +51,16 @@ class PostsController extends Controller
         return redirect('/profile/' . auth()->user()->id);
     }
 
-    public function show(\App\Models\Post $post)
+    public function show(Post $post)
     {
         $follows = (auth()->user()) ? auth()->user()->following->contains(auth()->user()->id) : false;
 
         return view('posts.show', compact('post', 'follows'));
+    }
+
+    public function destroy(Post $post)
+    {
+        Post::destroy($post->id);
+        return redirect('/');
     }
 }

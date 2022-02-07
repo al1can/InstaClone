@@ -1,11 +1,13 @@
 <template>
     <div class="mx-3">
         <div>
-            <div class="bi bi-heart-fill fs-3 d-inline" v-bind:class="[status ? 'bi-heart-fill' : 'bi-heart']" @click="likePost"></div>
+            <div class="bi bi-heart-fill fs-2 d-inline" v-bind:class="[status ? 'bi-heart-fill' : 'bi-heart']" @click="likePost"></div>
+            <a :href="'/post/'+postId"><i class="bi bi-chat-right-text text-dark fs-2 d-inline ms-3"></i></a>
         </div>
+
         <!-- Button trigger modal -->
-        <div type="button" class="fs-5" data-bs-toggle="modal" data-bs-target="#exampleModal" @click="whoLiked">
-            <span v-text="currentLikesCount"></span> likes
+        <div type="button" class="fs-5 d-inline" data-bs-toggle="modal" data-bs-target="#exampleModal" @click="whoLiked">
+            <span v-text="likesCountData"></span> likes
         </div>
 
         <!-- Modal -->
@@ -41,8 +43,7 @@
         data: function () {
             return {
                 status: this.likes,
-                currentLikesCount: this.likesCount,
-                showModal: false,
+                likesCountData: this.likesCount,
                 likedBy: [],
             }
         },
@@ -52,14 +53,8 @@
                 axios.post('/like/' + this.postId)
                     .then(response => {
                         this.status = !this.status;
-                        
-                        this.currentLikesCount = Number(this.currentLikesCount);
-                        if (this.status) {
-                            this.currentLikesCount += 1;
-                        }
-                        else {
-                            this.currentLikesCount -= 1;
-                        }
+                        this.likesCountData = Number(this.likesCountData);
+                        (this.status) ? this.likesCountData-=1 : this.likesCountData+=1;
                     });
             },
 

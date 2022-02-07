@@ -18,6 +18,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    @livewireStyles
 </head>
 <body>
     <div id="app">
@@ -32,10 +34,14 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+                
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        <div class="position-absolute top-50 start-50 translate-middle">
+                            @livewire('search-users')
+                        </div>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -84,5 +90,7 @@
             @yield('content')
         </main>
     </div>
+
+    @livewireScripts
 </body>
 </html>
