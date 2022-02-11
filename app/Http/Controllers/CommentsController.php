@@ -30,9 +30,9 @@ class CommentsController extends Controller
         return back();
     }
 
-    public function destroy()
+    public function destroy(Comment $comment)
     {
-        Comment::destroy(request("commentId"));
+        Comment::destroy($comment);
         return back();
     }
 }

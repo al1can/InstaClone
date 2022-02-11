@@ -37,9 +37,8 @@ Route::post('/like/{post}', [App\Http\Controllers\LikesController::class, 'store
 Route::post('/follow/{user}', [App\Http\Controllers\FollowsController::class, 'store']);
 
 Route::post('/comment/{post}', [App\Http\Controllers\CommentsController::class, 'store']);
-Route::delete('/comment/{post}', [App\Http\Controllers\CommentsController::class, 'destroy']);
+Route::delete('/comment/{comment}/delete', [App\Http\Controllers\CommentsController::class, 'destroy']);
 
 Route::get('/messages', [\App\Http\Controllers\MessagesController::class, 'index']);
-//Route::get('/messages/create', [\App\Http\Controllers\MessagesController::class, 'create']);
 Route::post('/messages/{user}/send', [\App\Http\Controllers\MessagesController::class, 'store']);
 Route::get('/messages/{user}', [\App\Http\Controllers\MessagesController::class, 'show']);

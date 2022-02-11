@@ -37,12 +37,7 @@ class MessagesController extends Controller
         
         return view('message.show', compact('user'));
     }
-
-    public function create()
-    {
-        return view('message.create');
-    }
-
+/*
     public function store(Request $request, User $user)
     {
         auth()->user()->sent()->create([
@@ -52,4 +47,5 @@ class MessagesController extends Controller
 
         return redirect('/messages/'. $user->id);
     }
+*/
 }

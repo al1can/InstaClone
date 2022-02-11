@@ -8,6 +8,8 @@ use App\Models\User;
 class DirectMessaging extends Component
 {
 
+    public $body;
+
     public function mount($user)
     {
         $this->user = $user;
@@ -21,6 +23,14 @@ class DirectMessaging extends Component
         $receivedMessages = $sender->received->where('sender_id', $receiver->id);
         $messages = $sendedMessages->merge($receivedMessages)->sortBy('created_at');
         return $messages;
+    }
+
+    public function sendMessages()
+    {
+        auth()->user()->sent()->create([
+            'receiver_id' => $this->user->id,
+            'body' => $this->body,
+        ]);
     }
 
     public function render()

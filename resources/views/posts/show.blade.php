@@ -73,11 +73,10 @@
                         </div>
                         <div>
                             @if(auth()->user()->id==$comment->user->id)
-                                <form action="/comment/{{ $comment->id }}" method="post">
+                                <form action="/comment/{{ $comment->id }}/delete" method="post">
                                     @method('delete')
                                     @csrf
                                 
-                                    <input class="visually-hidden" type="text" name="commentId" value="{{ $comment->id }}">
                                     <div class="dropdown">
                                         <a class="btn bg-white fs-5 p-0 m-0" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="bi bi-three-dots"></i>

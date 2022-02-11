@@ -1,5 +1,5 @@
 <div>
-    <div class="bg-white rounded-3">
+    <div class="bg-white rounded-3" wire:poll.500ms="getMessages">
         @foreach($messages as $message)
             @if($message->sender_id == auth()->user()->id)
                 <div class="p-4">
@@ -17,16 +17,14 @@
                 </div>
             @endif
         @endforeach
-        <form action="/messages/{{ $user->id }}/send" method="post">
+        <form wire:submit.prevent="sendMessages">
             @csrf
 
             <div class="d-flex">
-                <label for="caption">Message</label>
-                <input id="body" type="text" class="form-control mx-5" name="body" required autofocus>
-                <button class="btn btn-primary">Send</button>
+                <label for="body">Message</label>
+                <input id="body" type="text" class="form-control mx-5" name="body" wire:model="body" required autofocus>
+                <button class="btn btn-primary" type="submit">Send</button>
             </div>
-
-
         </form>
     </div>
 </div>
