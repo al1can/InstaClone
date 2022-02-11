@@ -45,8 +45,9 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto align-items-center fs-5">
+                    <ul class="navbar-nav ms-auto align-items-center fs-6">
                         @auth
+                            <a href="/messages" class="nav-link">Message</a>
                             <a href="/profile/{{ Auth::user()->id }}" class="nav-link">Profile</a>
                         @endauth
                         <!-- Authentication Links -->

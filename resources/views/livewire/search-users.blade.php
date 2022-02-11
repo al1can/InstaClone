@@ -7,11 +7,11 @@
             <div class="dropdown-menu pt-0 mx-0 rounded-3 overflow-hidden" style="display:block !important">
                 <ul class="list-unstyled mb-0">
                     @foreach($users as $user)
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
-                                <span class="d-inline-block bg-success rounded-circle" style="width: .5em; height: .5em;"></span>
-                                <div>{{ $user->username }}</div>
-                            </a>
+                        <li class="d-flex align-items-center">
+                            <div class="dropdown-item d-flex align-items-center gap-2 py-2">
+                                <a href="/profile/{{ $user->id }}" class="btn text-underline-none">{{ $user->username }}</a>
+                                <a href="/messages/{{ $user->id }}" class="btn btn-primary me-0">DM</a>
+                            </div>
                         </li>
                     @endforeach
                 </ul>
