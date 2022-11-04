@@ -17,7 +17,7 @@ class PostsController extends Controller
     {
         $users = auth()->user()->following()->pluck('profiles.user_id');
 
-        $posts = Post::whereIn('user_id', $users)->with('user')->latest()->paginate(10);
+        $posts = Post::whereIn('user_id', $users)->with('user', 'likes')->latest()->paginate(10);
 
         return view('posts.index', compact('posts'));
     }
@@ -51,8 +51,16 @@ class PostsController extends Controller
         return redirect('/profile/' . auth()->user()->id);
     }
 
-    public function show(\App\Models\Post $post)
+    public function show(Post $post)
     {
-        return view('posts.show', compact('post'));
+        $follows = (auth()->user()) ? auth()->user()->following->contains(auth()->user()->id) : false;
+
+        return view('posts.show', compact('post', 'follows'));
+    }
+
+    public function destroy(Post $post)
+    {
+        Post::destroy($post->id);
+        return redirect('/');
     }
 }

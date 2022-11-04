@@ -13,8 +13,8 @@ class Profile extends Model
 
     public function profileImage()
     {
-        $imagePath = ($this->image) ? ($this->image) : 'profile\Eg3CDI2QjZYvlaNQ1tTYy5R8yt4NrZgSOovHU7fl.png';
-        return '/storage/' . $imagePath;
+        $imagePath = ($this->image) ? ($this->image) : '/img/default-image.jpg';
+        return $imagePath;
     }
 
     public function followers()

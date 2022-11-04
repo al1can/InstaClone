@@ -18,28 +18,38 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    @livewireStyles
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand d-flex" href="{{ url('/') }}">
+                <a class="navbar-brand d-flex align-items-center fs-4" href="{{ url('/') }}">
                     <!--{{ config('app.name', 'Laravel') }}-->
-                    <div><img src="/img/laravelLogo.png" alt="" width=40px height=30px class="pe-2"></div>
-                    <div class="ps-2" style="border-left: 1px solid black">Krinkil</div>
+                    <div><img src="/img/laravelLogo.png" alt="" style="width:40px; heigh:40px" class="me-2"></div>
+                    <div class="ps-2 nav-item" style="border-left: 1px solid black">Krinkil</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+                
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        <div class="position-absolute top-50 start-50 translate-middle">
+                            @livewire('search-users')
+                        </div>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto align-items-center fs-6">
+                        @auth
+                            <a href="/messages" class="nav-link">Message</a>
+                            <a href="/profile/{{ Auth::user()->id }}" class="nav-link">Profile</a>
+                        @endauth
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -81,5 +91,7 @@
             @yield('content')
         </main>
     </div>
+
+    @livewireScripts
 </body>
 </html>
