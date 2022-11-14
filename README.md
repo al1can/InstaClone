@@ -16,25 +16,17 @@ It teached me
 -> Getting to know a programming language with a long lasting project
 -> Finding mistakes of my past self and fix them in the go
 
-<h3> Home </h3>
+# Pictures
 
 ![home](https://user-images.githubusercontent.com/93518653/201680791-582f1505-614b-4d75-8423-04abf9fc1ce2.png)
 
-![home_empty](https://user-images.githubusercontent.com/93518653/201674462-08add678-775c-4ad3-a2ba-8cd53d0bcdc4.png)
-
-<h3> Profile Page </h3>
-
 ![profile](https://user-images.githubusercontent.com/93518653/201674479-d3677d31-b289-4edf-b99b-82b306b2e6f5.png)
 
-<h3> Register Page </h3>
+![home_empty](https://user-images.githubusercontent.com/93518653/201674462-08add678-775c-4ad3-a2ba-8cd53d0bcdc4.png)
 
 ![register](https://user-images.githubusercontent.com/93518653/201674487-1a336dd7-9565-458a-9af1-dbad173b7570.png)
 
-<h3> Login Page </h3>
-
 ![login](https://user-images.githubusercontent.com/93518653/201674441-6e61f444-bf73-40a7-bd4c-7f0e65e1a75d.png)
-
-<h3> Post Page </h3>
 
 ![post](https://user-images.githubusercontent.com/93518653/201680801-a23c1d3a-4da9-44e1-b7d4-d0584d13784e.png)
 
