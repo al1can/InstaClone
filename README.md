@@ -3,7 +3,7 @@
 Instagram Clone written in Laravel
 
 # What this project includes
-Basically a working Instagram Clone. It has p
+Basically a working Instagram Clone. You can share posts and see other people's posts, like and comment on their posts, send direct messages, follow other people and much more.
 
 
 # What I learned
