@@ -1,67 +1,36 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# InstaClone
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Instagram Clone written in Laravel
 
-## About Laravel
+# What this project includes
+Basically a working Instagram Clone. It has p
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# What I learned
+When I started this project I knew so little about web development. I learned a lot of things with this particular project.
+It teached me 
+-> MVC architecture and API development with Laravel
+-> How to implement knew technologies and use them in the same project
+-> Using Blade, Livewire, Vue, Bootstrap for frontend
+-> Working with databases and seeing what suits my needs
+-> Getting to know a programming language with a long lasting project
+-> Finding mistakes of my past self and fix them in the go
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<h3> Register Page </h3>
+![register](https://user-images.githubusercontent.com/93518653/201674487-1a336dd7-9565-458a-9af1-dbad173b7570.png)
 
-## Learning Laravel
+<h3> Login Page </h3>
+![login](https://user-images.githubusercontent.com/93518653/201674441-6e61f444-bf73-40a7-bd4c-7f0e65e1a75d.png)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<h3> Home </h3>
+![home](https://user-images.githubusercontent.com/93518653/201680791-582f1505-614b-4d75-8423-04abf9fc1ce2.png)
+![home_empty](https://user-images.githubusercontent.com/93518653/201674462-08add678-775c-4ad3-a2ba-8cd53d0bcdc4.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<h3> Login Page </h3>
+![profile](https://user-images.githubusercontent.com/93518653/201674479-d3677d31-b289-4edf-b99b-82b306b2e6f5.png)
 
-## Laravel Sponsors
+<h3> Post Page </h3>
+![post](https://user-images.githubusercontent.com/93518653/201680801-a23c1d3a-4da9-44e1-b7d4-d0584d13784e.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-"# instagramClone" 
+# What can be improved
+Towards the end of the project I got bored and wanted to pass on to different projects on my list but I still had some features that I wanted to implement so I just wrote them in the most simplist way without thinking about details and spesifically the frontend. Frontend in direct messaging page can be improved and I figured couple of problems with reactive components.
