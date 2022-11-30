@@ -8,13 +8,13 @@ Basically a working Instagram Clone. You can share posts and see other people's 
 
 # What I learned
 When I started this project I knew so little about web development. I learned a lot of things with this particular project.
-It teached me 
--> MVC architecture and API development with Laravel
--> How to implement knew technologies and use them in the same project
--> Using Blade, Livewire, Vue, Bootstrap for frontend
--> Working with databases and seeing what suits my needs
--> Getting to know a programming language with a long lasting project
--> Finding mistakes of my past self and fix them in the go
+It teached me <br>
+-> MVC architecture and API development with Laravel <br>
+-> How to implement knew technologies and use them in the same project <br>
+-> Using Blade, Livewire, Vue, Bootstrap for frontend <br>
+-> Working with databases and seeing what suits my needs <br>
+-> Getting to know a programming language with a long lasting project <br>
+-> Finding mistakes of my past self and fix them in the go <br>
 
 # Pictures
 
