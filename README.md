@@ -6,7 +6,7 @@ Instagram Clone written in Laravel
 Basically a working Instagram Clone. You can share posts and see other people's posts, like and comment on their posts, send direct messages, follow other people and much more.
 
 
-# Pictures
+## Pictures
 
 ![home](https://user-images.githubusercontent.com/93518653/201680791-582f1505-614b-4d75-8423-04abf9fc1ce2.png)
 
@@ -30,5 +30,5 @@ It teached me <br>
 -> Getting to know a programming language with a long lasting project <br>
 -> Finding mistakes of my past self and fix them in the go <br>
 
-# What can be improved
+## What can be improved
 Towards the end of the project I got bored and wanted to pass on to different projects on my list but I still had some features that I wanted to implement so I just wrote them in the most simplist way without thinking about details and spesifically the frontend. Frontend in direct messaging page can be improved and I figured couple of problems with reactive components.
